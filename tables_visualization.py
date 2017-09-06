@@ -1,6 +1,7 @@
 import pandas as pd
 from flask import Flask, render_template, send_file
 import os
+import webbrowser, random, threading
 
 ############### App ##################
 app = Flask(__name__)
@@ -128,5 +129,15 @@ def tohtml_library(df, tableId):
 
 ############# run app ############
 if __name__ == '__main__':
-    app.run(threaded=True, host='0.0.0.0')
+    port = 5000 + random.randint(0, 999)
+    url = "http://127.0.0.1:{0}".format(port)
+    threading.Timer(1.25, lambda: webbrowser.open(url)).start()
+    #webbrowser.open_new(url)
+    app.run(port=port, debug=False)
+
+    # port = int(os.environ.get('PORT', 5000))
+    # url = 'http://127.0.0.1:5000'
+    # webbrowser.open_new(url)
+    # app.run(threaded=True, host='0.0.0.0', port=port)
+
 
