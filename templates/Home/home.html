@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block heading %} {{super()}} {% endblock %}
+
+
+{% block content %}
+
+<div id="homePage" class="container-fluid">
+    <div class="row">
+        <div class = "col-lg-12" >
+            <div class="row">
+                <div class = "col-lg-12" >
+                    <h3>NastyBugs</h3>
+                    <p>
+                        A Simple Method for Extracting Antimicrobial Resistance Information from Metagenomes
+                        Hackathon team: Lead: Steve Tsang - SysAdmins: Greg Fedewa, Daniel Quang, Sherif Farag - Writers: Matthew Moss, Alexey V. Rakov
+                        Antibiotic resistance of bacterial pathogens remains a major threat to public health around the world. Fast and reliable extraction of antimicrobial resistance genomic signatures from large raw sequencing datasets obtained from human metagenomes is a key task for bioinformatics. NastyBugs is a versatile workflow for fast extracting of antimicrobial resistance genomic signatures from metagenomes.
+                        Objective: Create a reusable, reproducible, scalable, interoperable workflow to locate antimicrobial resistant genomic signatures in SRA shotgun sequencing (metagenomics) datasets.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                 <div class = "col-lg-12" >
+                     <figure>
+                         <img  width="850" alt="AbxResistanceMetagenomics" src="/static/images/AbxResistanceMetagenomics.png"/>
+                         <br><br>
+                         <figcaption style="font-size: medium"><b>Fig.1</b> - Nastybug pipeline.</figcaption>
+                     </figure>
+
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block footer %} {{super()}} {% endblock %}
+
+
