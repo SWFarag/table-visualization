@@ -26,6 +26,6 @@ EXPOSE 8000
 RUN apt-get install -y nano
 
 # Set the default command to execute
-#CMD ["python", "wsgi.py"]
+CMD ["python", "wsgi.py"]
 
 
